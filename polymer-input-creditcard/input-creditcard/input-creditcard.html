@@ -1,0 +1,22 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="input-creditcard">
+	<template>
+		<link rel="stylesheet" href="input-creditcard.css">
+		<div class="icon {{cardtype}}"></div>
+		<input 
+			type="text"
+			id="creditcard"
+			class="input" 
+			name="{{name}}" 
+			value="{{value}}" 
+			placeholder="{{placeholder}}" 
+			disabled?="{{disabled}}" 
+			required?="{{required}}" 
+			readonly?="{{readonly}}" 
+			valid?={{valid}} 
+			aria-label="{{label || placeholder}}" 
+			pattern="[0-9][0-9]{4,}"
+			/>
+	</template>
+	<script src="input-creditcard.js"></script>
+</polymer-element>

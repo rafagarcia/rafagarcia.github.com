@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+	<link href="input-creditcard/input-creditcard.html" rel="import">
+	<style>
+		input-creditcard {
+			border: 1px solid #ccc;
+		}
+
+		input-creditcard.invalid {
+			border-color: red;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<input-creditcard 
+		name="card2"
+		placeholder="Enter your card number" 
+		value="371449635398431" 
+		errorClassName="invalid"
+		valid="true">
+	</input-creditcard>	
+
+	<input-creditcard 
+		name="card1"
+		placeholder="Enter your card number" 
+		value="000" 
+		errorClassName="invalid"
+		valid="true">
+	</input-creditcard>	
+
+	
+	<script>
+	window.addEventListener('polymer-ready', function(e) {
+		var cc = document.getElementsByTagName('input-creditcard')[0];
+	});
+	</script>
+
+</body>
+</html>
